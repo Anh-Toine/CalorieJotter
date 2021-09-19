@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalorieJotter.MainPage">
+     <StackLayout Margin="0,40,0,0">
+         <ScrollView>
+             <StackLayout>
+         <StackLayout>
+             <Image x:Name="topImg" Aspect="AspectFill" HorizontalOptions="FillAndExpand"/>
+         </StackLayout>
+
+         <StackLayout  Orientation="Vertical" RadioButtonGroup.GroupName="style">
+            <RadioButton Content="Lebanese(1200 cal)" CheckedChanged="OnStyleCheckedChanged"/>
+            <RadioButton Content="Mexican(1146 cal)" CheckedChanged="OnStyleCheckedChanged"/>
+            <RadioButton Content="Irish(1170 cal)" CheckedChanged="OnStyleCheckedChanged"/>
+            <RadioButton Content="Singaporean(1170 cal)" CheckedChanged="OnStyleCheckedChanged"/>
+         </StackLayout>
+
+         <StackLayout Orientation="Horizontal">
+             <Label Text="Extra Gravy"/>
+             <CheckBox IsChecked="False" x:Name="extraGravyChkbox" CheckedChanged="OnExtraGravyChecked"/>
+         </StackLayout>
+
+          <StackLayout Orientation="Horizontal">
+             <Label Text="Extra Cheese Curds"/>
+             <CheckBox IsChecked="False" x:Name="extraCheeseChkbox" CheckedChanged="OnExtraCheeseChecked"/>
+         </StackLayout>
+
+         <StackLayout>
+              <Label Text="Fries style"/>
+         </StackLayout>
+
+         <StackLayout Orientation="Horizontal">
+             <RadioButton Content="Regular" GroupName="fries"/>
+             <RadioButton Content="Curly" GroupName="fries"/>
+         </StackLayout>
+
+         <StackLayout>
+             <Label Text="Spice level"/>
+             <Slider Minimum="0" Maximum="100" x:Name="spiceSlide" ValueChanged="SpiceValueChanged" />
+         </StackLayout>
+
+         <StackLayout>
+             <Label x:Name="calorieLabel" Text="Calories: 0" TextColor="Blue"/>
+         </StackLayout>
+
+         <StackLayout>
+             <Label x:Name="sliderLabel" Text="Spicy level: 0" TextColor="DarkRed"/>
+         </StackLayout>
+
+         <StackLayout>
+             <Image x:Name="bottomImg" Aspect="AspectFill" HorizontalOptions="FillAndExpand"/>
+         </StackLayout>
+     </StackLayout>
+     </ScrollView>
+         
+     </StackLayout>
+</ContentPage>
